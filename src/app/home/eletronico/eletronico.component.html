@@ -1,0 +1,48 @@
+<ion-content>
+  <ion-button expand="block" [routerLink]="['/mantenimientos']" class="bt2" color="light">
+    <ion-icon name="return-up-back-sharp" slot="start"></ion-icon>
+  </ion-button>
+
+
+  <ion-button class="btn" style='background: darkolivegreen;'  expand="block" fill="clear" shape="round" color="warning">
+    RESET
+  </ion-button>
+
+  <ion-grid >
+    <ion-row  >
+      <ion-button color="secundary">
+        <ion-col > </ion-col>
+        
+        
+        <ion-col >
+          <div >
+            0{{tiempo.minutos}}
+           </div>
+         </ion-col>
+         
+         <ion-col >
+           <div *ngIf="tiempo.segundos <10">
+             0{{tiempo.segundos}}
+           </div>
+           
+           <div *ngIf="tiempo.segundos >=10">
+    {{tiempo.segundos}}
+   </div>
+   
+ </ion-col>
+ 
+</ion-button>
+</ion-row>
+</ion-grid>
+
+<ion-item>
+  <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+</ion-item>
+<ion-label color="warning">Inicio</ion-label>
+<ion-label color="danger" class="estado">Completo</ion-label>
+
+
+<img src="https://i.pinimg.com/564x/bf/52/03/bf52030a6416ad0376f06d75994547ab.jpg" class="imglub" >
+
+
+</ion-content>
