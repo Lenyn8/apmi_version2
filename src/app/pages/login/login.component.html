@@ -4,18 +4,18 @@
   <ion-icon name="home-sharp"></ion-icon>
 </ion-button>
 
-  <img [routerLink]="['/']"  src="https://i.pinimg.com/564x/1c/93/41/1c9341a61d6cf3bcfb8cf52d75c6dfd6.jpg">
+  <img   src="assets/img/logo-login.png">
 
-  <ion-button expand="block" [routerLink]="['/opciones']"  class="bt1" color="light">Entrar</ion-button>
+  <ion-button expand="block" (click)="login()"  class="bt1" color="light">Entrar</ion-button>
 <ion-item>
 <ion-label>Correo: </ion-label>
-<ion-input type="string" [(ngModel)]="correo"></ion-input>
+<ion-input type="string" [(ngModel)]="this.credenciales.correo"></ion-input>
 <ion-input></ion-input>
 </ion-item>
 
 <ion-item>
-<ion-label>Contraseña: </ion-label>
-<ion-input type="password" minlength="6" [(ngModel)]="password"></ion-input>
+<ion-label>Contraseña (6 numeros): </ion-label>
+<ion-input type="password" minlength="6" [(ngModel)]="this.credenciales.password"></ion-input>
 </ion-item>
 
 

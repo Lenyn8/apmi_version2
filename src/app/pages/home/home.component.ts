@@ -2,7 +2,7 @@ import { Component, OnInit, } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { MaquinaI } from 'src/app/models';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AutenticationService } from 'src/app/services/autentication.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { RequestApiSumaI,ResponseApiSumaI } from 'src/app/models';
 
 @Component ({
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     numero2: null,
   }
 
-  constructor ( private authenticationService: AutenticationService,
+  constructor ( private authenticationService: AuthenticationService,
            private http: HttpClient,
            public loadingController: LoadingController,
            public toastController: ToastController 

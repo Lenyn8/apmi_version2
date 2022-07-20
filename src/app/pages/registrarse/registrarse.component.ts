@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 import { UserInfoI } from 'src/app/models';
-import { AutenticationService } from 'src/app/services/autentication.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
@@ -17,14 +20,16 @@ export class RegistrarseComponent implements OnInit {
     nombre:null,
     telefono:null,
     uid:null,
+    perfil:'visitante',
   };
 
   repassword: string= null;
 
 
   constructor(
-    private autenticationService:AutenticationService,
-              private firestoreService: FirestoreService
+    private authenticationService:AuthenticationService,
+              private firestoreService: FirestoreService,
+              private router:Router
   ) { }
 
   ngOnInit() {}
@@ -34,7 +39,11 @@ export class RegistrarseComponent implements OnInit {
       console.log('passwords no coinciden');  
       return;
     }
-    const res = await  this.autenticationService.registrarUser(this.newUser);
+    const res = await  this.authenticationService.registrarUser(this.newUser).catch(error=>{
+      console.log('error');
+      
+    });
+  console.log('User ->',this.newUser)
     console.log('res -> ',res);
     if (res) {
       
@@ -43,6 +52,7 @@ export class RegistrarseComponent implements OnInit {
        this.newUser.uid = id;
        this.firestoreService.saveDoc(path, id,this.newUser)
        // guardar en la base de datos
+       this.router.navigate(['invitado'])
     }
   
  }

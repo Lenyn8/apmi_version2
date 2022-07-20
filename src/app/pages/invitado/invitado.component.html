@@ -36,3 +36,10 @@
 
     </div>
 
+    <ion-menu-toggle color="danger" >
+      <ion-item *ngIf="rol=='admin' "[routerLink]="['/opciones']">
+        <ion-label>Ver Opciones</ion-label>
+      </ion-item>
+   
+  </ion-menu-toggle>
+</ion-content>

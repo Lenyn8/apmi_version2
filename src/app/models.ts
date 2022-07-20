@@ -16,6 +16,7 @@ export interface UserInfoI {
     nombre:string;
     telefono:string;
     uid:string;
+    perfil:'visitante'|'admin'
 }
 
 export interface ResponseApiSumaI {

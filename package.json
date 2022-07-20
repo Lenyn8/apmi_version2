@@ -33,6 +33,7 @@
     "animejs": "^3.2.1",
     "cordova-plugin-camera": "^6.0.0",
     "firebase": "^9.8.1",
+    "gl-ionic-background-video": "^0.0.5",
     "magic.css": "^1.4.7",
     "moment": "^2.29.4",
     "number-flip": "^1.1.10",

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AutenticationService } from 'src/app/services/autentication.service';
+
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 
 
@@ -12,12 +13,16 @@ import { AutenticationService } from 'src/app/services/autentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  correo: string;
-  password:string;
+  credenciales={
 
-  constructor(   private  autenticationService: AutenticationService,
+    correo: null,
+    password:null
+  }
+
+  constructor(   private  authenticationService: AuthenticationService,
     private router:Router) { 
  
+console.log("estoy en login");
 
 
   }
@@ -28,10 +33,13 @@ export class LoginComponent implements OnInit {
     console.log('estoy en open menu');
   }
   async login() {
-    const respuesta =  await this.autenticationService.login(this.correo,this.password);
-    console.log('esta es la respuesta ->', respuesta);
+    const respuesta =  await this.authenticationService.login(this.credenciales.correo,this.credenciales.password).catch(error=>{
+      console.log('Erorr en la clave');
+      
+    });
     if (respuesta) {
-        this.router.navigate(['/home'])
+      console.log('esta es la respuesta ->', respuesta);
+      this.router.navigate(['/invitado'])
    }
    
  }
