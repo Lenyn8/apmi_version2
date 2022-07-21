@@ -1,11 +1,15 @@
 <ion-content>
-  <ion-button expand="block" [routerLink]="['/mantenimientos']" class="bt2" color="light">
-    <ion-icon name="return-up-back-sharp" slot="start"></ion-icon>
+  <ion-button shape="round" fill="outline"  [routerLink]="['/listadoinvitado']" class="bt2" color="warning">
+    <ion-icon name="return-up-back-sharp" slot="start"> </ion-icon>
   </ion-button>
 
-  <ion-button   style='background: darkolivegreen;' expand="block" fill="clear" shape="round" color="warning">
-    RESET
-  </ion-button>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+     <ion-col  sizeXs="10"  sizeLg="4" class="redes" class="ion-text-center"> 
+       <ion-button class="lub" size="default" expand="block" color="dark"> Ejecutado <ion-icon name="color-fill-outline" slot = "start"></ion-icon> </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>    
 
   <ion-grid >
     <ion-row  >

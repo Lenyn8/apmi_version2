@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { EletronicoComponent } from './home/eletronico/eletronico.component';
 import { HidraulicoComponent } from './home/hidraulico/hidraulico.component';
@@ -20,8 +20,13 @@ import { SoftwareComponent } from './home/software/software.component';
 import { ArduinoComponent } from './arduino/arduino.component';
 import { ListadoinvitadoComponent } from './listadoinvitado/listadoinvitado.component';
 import { TecnicosComponent } from './tecnicos/tecnicos.component';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 
 
+//background
 
 
 
@@ -47,15 +52,34 @@ const routes: Routes = [
   {path:'arduino',component: ArduinoComponent},
   {path:'listadoinvitado',component:ListadoinvitadoComponent},
   {path:'tecnicos',component: TecnicosComponent},
-  {path:'',component: PrincipalComponent},
+  {path:'principal',component: PrincipalComponent},
+  { path:'',component: BienvenidaComponent},
   
 
 ];
   
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules,
+  
+    
+    })
+  
+  
+  
+  
+  
+  
+  
+  
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  
+
+
+
 })
 export class AppRoutingModule { }

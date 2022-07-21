@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArduinoComponent } from './arduino/arduino.component';
 import { ListadoinvitadoComponent } from './listadoinvitado/listadoinvitado.component';
 import { TecnicosComponent } from './tecnicos/tecnicos.component';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 
 
 
@@ -58,7 +59,8 @@ import { TecnicosComponent } from './tecnicos/tecnicos.component';
     SoftwareComponent,
     ArduinoComponent,
     ListadoinvitadoComponent,
-    TecnicosComponent
+    TecnicosComponent,
+    BienvenidaComponent
 
     
 

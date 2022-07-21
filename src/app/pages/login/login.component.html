@@ -1,24 +1,50 @@
 
 <ion-content>
-<ion-button expand="block" [routerLink]="['/']" class="bt2" color="light">
-  <ion-icon name="home-sharp"></ion-icon>
-</ion-button>
 
-  <img   src="assets/img/logo-login.png">
+  <ion-button shape="round" fill="outline"  [routerLink]="['/principal']" class="bt2" color="warning">
+    <ion-icon name="return-up-back-sharp" slot="start"> </ion-icon>
+  </ion-button>
 
-  <ion-button expand="block" (click)="login()"  class="bt1" color="light">Entrar</ion-button>
-<ion-item>
-<ion-label>Correo: </ion-label>
-<ion-input type="string" [(ngModel)]="this.credenciales.correo"></ion-input>
-<ion-input></ion-input>
-</ion-item>
+  <ion-grid >
+    <ion-row >
+       <ion-col sizeXs="12" sizeSm="10" sizeMd="8" sizeXl="4" class="logo4" >
 
-<ion-item>
-<ion-label>Contraseña (6 numeros): </ion-label>
-<ion-input type="password" minlength="6" [(ngModel)]="this.credenciales.password"></ion-input>
-</ion-item>
+        <img   src="assets/img/logo-login.png">
+       </ion-col>
+     </ion-row>
+    </ion-grid>
 
 
+   
+ <ion-grid class="redes">
+      <ion-row  class="ion-justify-content-center">
+        <ion-col  sizeXs="12" sizeMd="8" sizeLg="4"> 
+          <ion-item>
+          <ion-label>Correo: </ion-label>
+          <ion-input type="string" [(ngModel)]="this.credenciales.correo"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row  class="ion-justify-content-center">
+        <ion-col  sizeXs="12" sizeMd="8" sizeLg="4">   
+          <ion-item>
+          <ion-label>Contraseña (6 numeros): </ion-label>
+          <ion-input type="password" minlength="6" [(ngModel)]="this.credenciales.password"></ion-input>
+        </ion-item>
+       </ion-col>
+      </ion-row>
+</ion-grid>       
+
+
+<ion-grid>
+  <ion-row class="ion-justify-content-center" >
+    <ion-col  sizeXs="12" sizeMd="8" sizeLg="4" class="redes" class="ion-text-center">
+
+      <ion-button  size= "medium" (click)="login()" color="light" shape="round" fill="outline" > ENTRAR </ion-button>
+    
+  </ion-col>
+</ion-row>
+</ion-grid>
 
 
 </ion-content>

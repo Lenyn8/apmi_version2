@@ -1,35 +1,89 @@
 
-  <ion-content padding>
-  <img src="assets/img/logo-2.png"/>
 
-
-
-
-    <ion-menu-toggle >
-    <ion-button class="logo1" size="default" expand="block" color="medium" [routerLink]="['/login']"   >
-     INGRESAR
-      <ion-icon name="key-outline" slot="start"></ion-icon>
-    </ion-button>
-  </ion-menu-toggle>
     
-    <ion-button class="logo1" size="default" expand="block" color="medium"  [routerLink]="['/registrarse']"  >
-      REGISTRATE
-      
-      <ion-icon name="newspaper-outline" slot="start"></ion-icon>
-    </ion-button>
+    
+  
+     <ion-content padding >
 
-    <ion-button class="logo1" size="default" expand="block" color="medium"  [routerLink]="['/invitado']"  >
-     Invitado
-     <ion-icon name="eye-sharp" slot="start"></ion-icon>
-    </ion-button>
+       
+        <ion-grid >
+          <ion-row >
+            <ion-col sizeXs="12" sizeSm="10" sizeMd="8" sizeXl="4" class="logo4" >
+
+            <img src="assets/img/logo-2.png" />
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+
+         
+    
+
 
 
 
   
-     
-    <ion-button class="redes1" size="default" expand="block" color="black"  [routerLink]="['/autentication']"  >
+  
+  <ion-grid>
+    <ion-row class="ion-justify-content-start" class="logo1">
+      <ion-col  sizeXs="12" sizeMd="8" sizeLg="4" >
+
+        <ion-button  size= "medium" color="light" shape="round" fill="outline" [routerLink]="['/login']"> INGRESAR AL SISTEMA <ion-icon name="key-outline" slot="start">
+      
+        </ion-icon>
+       </ion-button>
+
+       
+      </ion-col>
+    </ion-row>
+</ion-grid>
+  
+<ion-grid>
+    <ion-row class="ion-justify-content-start" class="logo2">
+      <ion-col  sizeXs="12" sizeMd="8" sizeLg="4">
+
+        <ion-button  size= "medium" color="light" shape="round" fill="outline" [routerLink]="['/registrarse']"> REGISTRATE <ion-icon name="newspaper-outline" slot="start">
+      
+        </ion-icon>
+       </ion-button>
+      
+      
+    
+  </ion-col>
+</ion-row>
+</ion-grid>
+
+
+
+<ion-grid>
+  <ion-row class="ion-justify-content-start" class="logo3">
+    <ion-col  sizeXs="12" sizeMd="8" sizeLg="4" >
+
+     <ion-button size= "medium" color="light" shape="round" fill="outline" [routerLink]="['/']"> SALIR <ion-icon name="eye-sharp" slot="start">
+      </ion-icon>
+      </ion-button>
+
+  </ion-col>
+ </ion-row>
+</ion-grid>
+
+  
+
+
+
+  
+<ion-grid>
+  <ion-row class="redes" class="ion-justify-content-center">
+    <ion-col  sizeXs="12" sizeMd="8" sizeLg="4">    
+    <ion-button class="redes1" size="default" expand="block" color="black"   >
          CONTACTANOS EN: 
     </ion-button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row class="facebook1" class="ion-justify-content-center">
+    <ion-col  sizeXs="12" sizeMd="8" sizeLg="4">  
         
     <div style="display: flex;" >
           <ion-fab-button color= "tertiary" href="https://www.facebook.com/APMI-asistente-de-equipos-CNC-104061762274413/?ref=pages_you_manage"><ion-icon name="logo-facebook" ></ion-icon></ion-fab-button>
@@ -37,5 +91,9 @@
           <ion-fab-button color="success"  href="https://web.whatsapp.com/" ><ion-icon name="logo-whatsapp"></ion-icon></ion-fab-button>
           <ion-fab-button color="light"  href="https://mail.google.com/mail/u/0/?tab=km" ><ion-icon name="mail-sharp"></ion-icon></ion-fab-button>
     </div>
+
+  </ion-col>
+ </ion-row>
+</ion-grid>  
       
   </ion-content> 

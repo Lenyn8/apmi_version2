@@ -4,7 +4,10 @@ import { IonicModule } from '@ionic/angular';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-import { defineCustomElements} from '@ionic/pwa-elements/loader';
+//import { defineCustomElements} from '@ionic/pwa-elements/loader';
+
+//background
+import {defineCustomElements } from 'gl-ionic-background-video/dist/loader';
 
 if (environment.production) {
   enableProdMode();
